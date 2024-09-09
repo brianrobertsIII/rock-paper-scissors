@@ -4,10 +4,15 @@ alert('PAPER!')
 alert('SCISSORS!')
 alert('GO!!') **/
 
-const options = ['Rcok', 'Paper', 'Scissors'];
+const options = ['Rock', 'Paper', 'Scissors'];
 
 function getComputerChoice() {
-    const choice =
+    const choice = options[Math.floor(Math.random()* options.length)]
+    return choice;
+}
+
+function playRound(playerSelection, computerSelection) {
+    
 }
 
 getComputerChoice();
