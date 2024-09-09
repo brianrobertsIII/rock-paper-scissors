@@ -11,6 +11,22 @@ function getComputerChoice() {
     return choice;
 }
 
+function getplayerChoice() {
+    let validatedInput = false;
+    while(validatedInput == false) {
+        const choice = prompt('Rock Paper Scissors');
+        if(choice == null) {
+            continue;
+        }
+
+        const choiceInUpper = choice.toUpperCase();
+        if(options.includes(choiceInUpper)) {
+            validatedInput = true;
+            return choiceInUpper;
+        }
+    }
+}
+
 function checkWinner(playerSelection, computerSelection) {
     if(playerSelection == computerSelection) {
         return 'Tie!';
@@ -47,9 +63,9 @@ function playRound(playerSelection, computerSelection) {
 function playGame() {
     console.log('Welcome!')
     for (let i = 0; i < 5; i++) {
-        const playerSelection = 'Rock';
+        const playerSelection = getplayerChoice();
         const computerSelection = getComputerChoice();
-        playRound(playerSelection, computerSelection);
+        console.log(playRound(playerSelection, computerSelection));
     }    
 }
 
