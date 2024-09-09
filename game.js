@@ -1,8 +1,8 @@
 
-/** alert('ROCK!')
+alert('ROCK!')
 alert('PAPER!')
 alert('SCISSORS!')
-alert('GO!!') **/
+alert('GO!!')
 
 const options = ['rock', 'paper', 'scissors'];
 
